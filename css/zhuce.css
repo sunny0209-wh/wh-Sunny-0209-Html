@@ -1,0 +1,106 @@
+*{
+    font-size: 15px;
+    border-radius: 4px;
+}
+.big-box{
+    width: 476px;
+    height: 520px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.big-box>.biaoti{
+    width: 460px;
+    height: 50.4px;
+    padding-top: 8px;
+    padding-left: 180px;
+    font-size: 23px;
+	font-weight: 550;
+    color: darkslategray; 
+}
+.big-box>.form{
+    width: 360px;
+	height: 330px;
+    margin: 0 auto;
+    margin-top: 28px;
+	margin-right: 58px;
+    margin-left: 58px;
+    padding-left: 38px;
+    padding-top: 20px; 
+	/*盒子阴影*/
+	box-shadow: 0 2px 6px #A9A9A9; 
+}
+.userName{
+    width: 290px;
+    height: 34px;
+    margin-top: 8px;
+	margin-bottom: 23px;
+	border: 1px solid #696969;
+}
+#divDiv{
+	color: red;
+}
+#divDiv1{
+    color: red;
+}
+#divDiv2{
+	color: red;
+}
+#divDiv3{
+    color: red;
+}
+.userName>.user{
+    width: 34px;
+	height: 34px;
+	float: right;
+	margin-top: 7px;
+}
+.user1{
+    width: 34px;
+	height: 34px;
+	float: right;
+	margin-top: 5px;
+}
+.userName>input{
+    width: 230px;
+	height: 32px;
+    padding-left: 15px;
+    font-size: 15px;
+    /* margin-bottom: 23px; */
+	border: 0px;
+}
+.bott-box{
+    width: 290px;
+    height: 34px;
+    margin-top: 40px;
+}
+.bott-box>.bot1{
+    width: 75px;
+    height: 28px;
+    margin-top: 3px;
+    margin-left: 40px;
+    border: 1px;
+	font-size: 15px;
+	color: white;
+	background-color: royalblue;
+}
+.bott-box>.bot2{
+    width: 75px;
+    height: 28px;
+    margin-top: 3px;
+    margin-left: 50px;
+    border: 1px;
+	font-size: 15px;
+	color: white;
+	background-color: royalblue;
+}
+.zuixia{
+	width: 545.6px;
+	height: 20px;
+	margin-top: 30px;
+    margin-bottom: 0px;
+    padding-left: 95px;
+	font-size: 16px;
+}
+.ziti{
+	font-size: 16px;
+}

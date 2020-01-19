@@ -1,0 +1,62 @@
+#caidan{
+	position: absolute;
+	right: 300px;
+	width: 300px;
+	height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: flex;
+}
+
+#bat{
+	margin-right: 30px;
+}
+
+#bbba{
+	margin-left: 80px;
+}
+
+#box{
+	position: relative;
+	position: absolute;
+	width: 1250px;
+	height: 525px;
+	top: 90px;
+	left: 200px;
+	margin-left: 60px;
+	margin-top: 20px;
+	font-size: 15px;
+}
+span{
+	font-size: 15px;
+	color: deepskyblue;
+}
+
+#ad{
+	cursor: pointer;
+}
+
+#pageWh{
+	position: absolute;
+	bottom: 40px;
+	left: 360px;
+}
+#ppp{
+	border-radius: 5px;
+}
+#ooo{
+	margin-left: 40px;
+	border-radius: 5px;
+}
+
+#bbaa{
+	margin-left: 80px;
+}
+
+/* th{
+    background-color: darkcyan;
+}
+
+#emp tr:nth-of-type(odd)>td{
+    background-color: cornflowerblue;
+} */

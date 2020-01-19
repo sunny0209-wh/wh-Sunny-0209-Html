@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/img/94544851942_avatar.png" alt="图片" id="er" style="width: 200px;height: 200px;">
+
+    <form id="boss" enctype="multipart/form-data">
+        <input type="file" name="file" id="de" />
+        <button type="button" id="buuu">上 传</button>
+    </form>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script>
+        $("#buuu").click(function(){
+            let de = new FormData($("#boss")[0]);
+            let url = "http://localhost:8080/file/uploads";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: de,
+                dataType: "JSON",
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    alert(data);
+                    console.log(data);
+                },
+                error: function(){
+                    alert("请求失败");
+                }
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .bos{
+            width: 242px;
+            height: 370px;
+            margin-left: 400px;
+            margin-top: 100px;
+            border: 1px deepskyblue solid;
+            background-color: lightblue;
+        }
+        .bos>.titlew{
+            margin-left: 90px;
+        }
+        .bos>#update{
+            width: 200px;
+            height: 200px;
+            margin: 0 20px;
+        }
+        #de{
+            margin-left: 60px;
+            margin-top: 10px;
+        }
+        #buuu{
+            width: 80px;
+            height: 25px;
+            border: 0;
+            background-color: dodgerblue;
+            color: white;
+            border-radius: 5px;
+            margin-left: 81px;
+            margin-top: 25px;
+        }
+    </style>
+<body>
+    <div class="bos">
+        <h3 class="titlew">修改头像</h3>
+        <img src="" alt="头像" id="update" title="修改头像" />
+        <form id="boss" enctype="multipart/form-data">
+            <input type="file" name="file" id="de" />
+            <button type="button" id="buuu">上 传</button>
+        </form>
+    </div>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script>
+        let titleName = sessionStorage.getItem('img');
+        $("#update").attr("src",titleName);
+
+        $("#booo").mouseover(function(){
+            $(this).css("background-color","deepskyblue");
+        }).mouseout(function(){
+            $(this).css("background-color","dodgerblue");
+        });
+
+        $("#buuu").click(function(){
+            let phone = sessionStorage.getItem('username');
+            console.log(phone);
+            let fromdata = new FormData($("#boss")[0]);
+            fromdata.append("userName",phone);
+            let url = "http://localhost:8080/file/uploads";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: fromdata,
+                dataType: "fromdata",
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    if(data == "上传失败")
+                    {
+                        alert("上传失败")
+                    }
+                    else
+                    {
+                        window.location.href = "/html/user.html";
+                    }
+                },
+                error: function(){
+                    alert("请求失败");
+                }
+            });
+        })
+    </script>
+</body>
+</html>
